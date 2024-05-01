@@ -2,7 +2,6 @@ package trabalho1.demo.service;
 
 import java.util.List;
 
-import trabalho1.demo.controller.dto.ProdutoDTO;
 import trabalho1.demo.entity.Produto;
 
 public interface ProdutoService {
@@ -16,7 +15,5 @@ public interface ProdutoService {
     void updateProduto(Long id_produto, Produto produto);
 
     void deleteProduto(Long id_produto);
-
-    void updateCodigo(Long id_produto, ProdutoDTO produtoDTO);
 
 }

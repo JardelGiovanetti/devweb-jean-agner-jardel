@@ -1,0 +1,39 @@
+.container {
+    padding: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    @media screen and (max-width: 600px) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+.container h1 {
+    text-align: center;
+    padding-top: 2%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+
+    @media screen and (max-width: 600px) {
+        font-size: 5vw;
+
+    }
+}
+
+.container h2 {
+    text-align: center;
+    padding-top: 2%;
+    color: rgb(206, 206, 206);
+    font-size: 20px;
+    padding-bottom: 2%;
+
+
+    @media screen and (max-width: 600px) {
+        font-size: 3vw;
+
+    }
+}

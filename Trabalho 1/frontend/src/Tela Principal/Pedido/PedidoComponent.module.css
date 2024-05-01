@@ -1,0 +1,35 @@
+.container {
+    padding: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+
+
+    @media screen and (max-width: 600px) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .CustomButton {
+        color: rgb(255, 255, 255);
+        background-color: rgb(46, 46, 170);
+        margin-bottom: 0.5%;
+    }
+
+    .CustomButton:hover {
+        background-color: rgb(64, 16, 219);
+    }
+
+
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-Shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    padding: 1%;
+
+}

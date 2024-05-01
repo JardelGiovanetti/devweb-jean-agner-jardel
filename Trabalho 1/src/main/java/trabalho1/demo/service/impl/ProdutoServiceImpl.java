@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import trabalho1.demo.controller.dto.ProdutoDTO;
 import trabalho1.demo.entity.Produto;
 import trabalho1.demo.repository.ProdutoRepository;
 import trabalho1.demo.service.ProdutoService;
@@ -48,15 +47,6 @@ public class ProdutoServiceImpl implements ProdutoService {
                 .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado!"));
         produtoRepository.delete(produto);
 
-    }
-
-    @Override
-    public void updateCodigo(Long id_produto, ProdutoDTO produtoDTO) {
-        Produto produto = produtoRepository.findById(id_produto)
-                .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado!"));
-
-        produto.setCodigo(produtoDTO.getCodigo());
-        produtoRepository.save(produto);
     }
 
 }
