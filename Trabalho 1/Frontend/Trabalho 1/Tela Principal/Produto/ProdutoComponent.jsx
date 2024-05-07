@@ -25,7 +25,7 @@ function ProdutoComponent() {
     }, []);
 
     function carregarProdutos() {
-        axios.get('/produto')
+        axios.get('https://devweb.jeanhenrique.site/produto')
             .then(response => {
                 setProdutos(response.data);
             })
@@ -46,7 +46,7 @@ function ProdutoComponent() {
             valor_venda: parseFloat(valorVenda)
         };
 
-        axios.post('/produto/add', produto)
+        axios.post('https://devweb.jeanhenrique.site/produto/add', produto)
             .then(() => {
                 carregarProdutos();
                 setShowModal(false);
@@ -82,7 +82,7 @@ function ProdutoComponent() {
             valor_venda: parseFloat(valorVenda)
         };
 
-        axios.put(`/produto/update/${selectedProduto.id_produto}`, produtoAtualizado)
+        axios.put(`https://devweb.jeanhenrique.site/produto/update/${selectedProduto.id_produto}`, produtoAtualizado)
             .then(() => {
                 carregarProdutos();
                 setShowModal(false);
@@ -94,7 +94,7 @@ function ProdutoComponent() {
 
     function excluirProduto(id_produto) {
         if (window.confirm('Deseja realmente excluir o produto?')) {
-            axios.delete(`/produto/delete/${id_produto}`)
+            axios.delete(`https://devweb.jeanhenrique.site/produto/delete/${id_produto}`)
                 .then(() => {
                     carregarProdutos();
                 })
@@ -140,7 +140,7 @@ function ProdutoComponent() {
     return (
         <div className={styles.container}>
             <h1>Seja Bem-Vindo ao Nosso Sistema de Vendas!</h1>
-            <h2>Abaixo estão nossas tabelas, selecione qual tabela deseja criar, inserir, ler ou remover elementos.</h2>
+            <h2>Abaixo estão nossas tabelas de produtos e pedidos! Cadastre os produtos para realizar as vendas (pedidos)</h2>
             <Button style={{ marginBottom: '0.5%', width: '210px', fontSize: '12px', paddingLeft: '0.5%', paddingRight: '0.5%' }} variant="contained" onClick={() => setShowModal(true)} disabled={produtos.length >= 5}>Adicionar Produto</Button>
             {errorMessages.codigo && <p>{errorMessages.codigo}</p>}
             {errorMessages.descricao && <p>{errorMessages.descricao}</p>}
@@ -159,7 +159,7 @@ function ProdutoComponent() {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {produtos.slice(0, 5).map(produto => (
+                        {Array.isArray(produtos) && produtos.slice(0, 5).map(produto => (
                             <TableRow key={produto.id_produto}>
                                 <TableCell>{produto.id_produto}</TableCell>
                                 <TableCell>{produto.codigo}</TableCell>

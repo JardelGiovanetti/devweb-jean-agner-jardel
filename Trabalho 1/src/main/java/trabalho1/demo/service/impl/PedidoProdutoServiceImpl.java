@@ -27,19 +27,16 @@ public class PedidoProdutoServiceImpl implements PedidoProdutoService {
 
     @Override
     public PedidoProduto getPedidoProduto(Long id_pedido_produto) {
-        PedidoProduto pedidoProduto = pedidoProdutoRepository.findById(id_pedido_produto)
+        return pedidoProdutoRepository.findById(id_pedido_produto)
                 .orElseThrow(() -> new IllegalArgumentException("PedidoProduto não encontrado!"));
-        return pedidoProduto;
     }
 
     @Override
     public void updatePedidoProduto(Long id_pedido_produto, PedidoProduto pedidoProduto) {
-
         pedidoProdutoRepository.findById(id_pedido_produto)
                 .orElseThrow(() -> new IllegalArgumentException("PedidoProduto não encontrado!"));
         pedidoProduto.setId_pedido_produto(id_pedido_produto);
         pedidoProdutoRepository.save(pedidoProduto);
-
     }
 
     @Override
