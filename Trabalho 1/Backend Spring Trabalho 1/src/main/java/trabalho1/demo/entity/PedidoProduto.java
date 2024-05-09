@@ -3,8 +3,6 @@ package trabalho1.demo.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,13 +17,9 @@ public class PedidoProduto {
     @GeneratedValue
     private Long id_pedido_produto;
 
-    @ManyToOne
-    @JoinColumn(name = "id_produto", referencedColumnName = "id_produto")
-    private Produto produto;
+    private Long id_produto;
 
-    @ManyToOne
-    @JoinColumn(name = "id_pedido", referencedColumnName = "id_pedido")
-    private Pedido pedido;
+    private Long id_pedido;
 
     private int quantidade;
 
@@ -43,20 +37,20 @@ public class PedidoProduto {
         this.id_pedido_produto = id_pedido_produto;
     }
 
-    public Produto getProduto() {
-        return this.produto;
+    public Long getId_produto() {
+        return this.id_produto;
     }
 
-    public void setProduto(Produto produto) {
-        this.produto = produto;
+    public void setId_produto(Long id_produto) {
+        this.id_produto = id_produto;
     }
 
-    public Pedido getPedido() {
-        return this.pedido;
+    public Long getId_pedido() {
+        return this.id_pedido;
     }
 
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
+    public void setId_pedido(Long id_pedido) {
+        this.id_pedido = id_pedido;
     }
 
     public int getQuantidade() {
