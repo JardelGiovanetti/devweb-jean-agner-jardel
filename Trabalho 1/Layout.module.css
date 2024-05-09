@@ -1,0 +1,18 @@
+.container {
+    background-image: url('../../../repositorioImagens/Vendas.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgb(121, 121, 121);
+
+
+}
+
+.dark {
+
+    .container {
+        background-color: rgb(30, 30, 30);
+    }
+
+}
