@@ -2,8 +2,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    url: local-nao-definido-no-repositoo
-    password: senha-nao-definida-no-repositorio
+    url: jdbc:mysql://localhost:3306/devweb
+    password: password
   jpa:
     hibernate:
       ddl-auto: update
