@@ -1,0 +1,205 @@
+.light {
+    background-color: #6a6a6a;
+    color: #333;
+    background-image: url('../../repositorioImagens/ToDoList.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+
+.dark {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    background-image: url('../../repositorioImagens/ToDoListDark.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    padding: 50px;
+    padding-top: 150px;
+    padding-bottom: 400px;
+
+
+}
+
+
+.formContainer {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    gap: 2.5%;
+    color: rgb(66, 66, 66);
+    margin-top: 0;
+    padding: 0;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.dark .form {
+    background-color: rgb(31, 31, 31);
+    color: #c0c0c0;
+}
+
+.form .column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form h1 {
+    text-align: center;
+
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form h2 {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    margin-left: 5%;
+    box-sizing: border-box;
+
+}
+
+.dark .form input {
+    background-color: #2b2b2b;
+    border-color: #666;
+    color: #f0f0f0;
+}
+
+.form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-left: 5%;
+    box-sizing: border-box;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.dark .form button {
+    background-color: #003166;
+}
+
+.dark .form button:hover {
+    background-color: #004288;
+}
+
+.container .toggleButton {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    text-decoration: underline;
+    text-align: left;
+    display: inline;
+    width: 150px;
+    margin-left: 5px;
+}
+
+.dark .form .toggleButton {
+    background-color: transparent;
+    color: #0062cb;
+
+}
+
+.container .toggleButton:hover {
+    color: #0056b3;
+    background-color: transparent;
+}
+
+.dark .form .toggleButton:hover {
+    color: #003166;
+    background-color: transparent;
+}
+
+.container p {
+    margin-left: 5%;
+}
+
+
+
+.ContainerLado {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.dark .ContainerLado {
+    background-color: rgb(31, 31, 31);
+    color: #c0c0c0;
+
+}
+
+.ContainerLado h2 {
+    font-size: 25px;
+    margin: 0;
+    margin-top: 15px;
+    max-width: 90%;
+    width: 90%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+.ContainerLado li {
+    font-size: 15px;
+    text-align: justify;
+    margin: 5px;
+    max-width: 90%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
